@@ -11,7 +11,7 @@
 /dev/mobicore               u:object_r:tee_device:s0
 /dev/mobicore-user          u:object_r:tee_device:s0
 /dev/mtp_usb*               u:object_r:mtp_device:s0
-/dev/sec-nfc                u:object_r:nfc_device:s0
+#/dev/sec-nfc                u:object_r:nfc_device:s0
 /dev/s5p-smem               u:object_r:secmem_device:s0
 /dev/ttySAC0                u:object_r:hci_attach_dev:s0
 /dev/umts.*                 u:object_r:mif_device:s0
@@ -49,7 +49,7 @@
 #
 
 /data/camera(/.*)?           u:object_r:camera_data_file:s0
-/data/nfc(/.*)?              u:object_r:nfc_data_file:s0
+#/data/nfc(/.*)?              u:object_r:nfc_data_file:s0
 /data/.wifiver.info          u:object_r:wifi_data_file:s0
 /data/misc/radio(/.*)?       u:object_r:radio_data_file:s0
 /efs/wifi/.mac.info          u:object_r:wifi_data_file:s0

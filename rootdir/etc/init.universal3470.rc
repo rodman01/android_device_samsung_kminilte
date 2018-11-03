@@ -10,6 +10,7 @@ on early-init
 on init
     # Support legacy paths
     symlink /sdcard /storage/sdcard0
+    symlink /sdcard /mnt/sdcard0
 
     mkdir /efs 0771 radio system
     symlink /dev/block/mmcblk0p13 /dev/mbin0
@@ -65,9 +66,17 @@ on post-fs-data
 	setprop media.enable-commonsource true
 
 #nfc
-    setprop ro.nfc.port "I2C"
-    mkdir /data/nfc 0700 nfc nfc
-    mkdir /data/nfc/param 0700 nfc nfc
+#    setprop ro.nfc.port "I2C"
+#    mkdir /data/nfc 0700 nfc nfc
+#    mkdir /data/nfc/param 0700 nfc nfc
+
+# NFC_NXP
+    symlink /dev/pn547 /dev/pn544
+    symlink /dev/pn547 /dev/pn54x
+
+    # NFC_SLSI
+    mkdir /data/vendor/nfc 0770 nfc nfc
+    mkdir /data/vendor/nfc/param 0770 nfc nfc
 
 #Private Mode
     mkdir /mnt/shell/privatemode 0700 system system
@@ -75,6 +84,9 @@ on post-fs-data
     mkdir /data/privatemode 0770 system system
     chown system system /data/privatemode
     restorecon /data/privatemode
+    
+    #Create folder of camera
+    mkdir /data/misc/camera 0770 camera camera
 
     # Permission for flashlight control for HAL3.3
     chmod 0664 /sys/class/camera/flash/rear_flash
@@ -176,7 +188,7 @@ on boot
     chmod 0660 /dev/s5p-smem
     chown system system /dev/mobicore
     chown radio system /dev/mobicore-user
-    chown system drmrpc /dev/s5p-smem
+    chown media system drmrpc /dev/s5p-smem
     chmod 0660 /dev/t-base-tui
     chown system system /dev/t-base-tui
     export MC_AUTH_TOKEN_PATH /efs

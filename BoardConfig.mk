@@ -57,11 +57,8 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 # NFC
 # Chipset: Samsung s3fwrn5
 # Note: as libnfc-nci only supports pn547 and bcm2079x, select pn547 here but use the stock s3fwrn5 hal
-# BOARD_NFC_CHIPSET := pn547
-# BOARD_NFC_HAL_SUFFIX := universal3470
-
-# NFC
-include device/samsung/klte-common/nfc/pn547/board.mk
+BOARD_NFC_CHIPSET := pn547
+BOARD_NFC_HAL_SUFFIX := universal3470
 
 # PowerHAL
 TARGET_POWERHAL_VARIANT := exynos3

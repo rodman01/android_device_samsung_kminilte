@@ -18,10 +18,10 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/samsung/kminilte/full_kminilte.mk)
 
-# Inherit common Lineage phone.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit common RR phone.
+$(call inherit-product, vendor/rr/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_kminilte
+PRODUCT_NAME := rr_kminilte
 PRODUCT_DEVICE := kminilte
 PRODUCT_MODEL := SM-G800F
 PRODUCT_BRAND := samsung

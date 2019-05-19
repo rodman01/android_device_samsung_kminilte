@@ -1,3 +1,3 @@
-add_lunch_combo lineage_kminilte-eng
-add_lunch_combo lineage_kminilte-user
-add_lunch_combo lineage_kminilte-userdebug
+add_lunch_combo rr_kminilte-eng
+add_lunch_combo rr_kminilte-user
+add_lunch_combo rr_kminilte-userdebug

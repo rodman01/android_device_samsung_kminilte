@@ -1,3 +1,3 @@
 PRODUCT_MAKEFILES := \
-     device/samsung/kminilte/lineage_kminilte.mk 
+     device/samsung/kminilte/rr_kminilte.mk 
      

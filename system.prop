@@ -70,3 +70,6 @@ ro.ril.fast.dormancy.rule=1
 
 # Increase Wi-fi scanning interval
 wifi.supplicant_scan_interval=180
+
+# Data Disable mobile data by default
+ro.com.android.mobiledata=false

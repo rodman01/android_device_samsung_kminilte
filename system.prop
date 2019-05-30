@@ -73,3 +73,6 @@ wifi.supplicant_scan_interval=180
 
 # Data Disable mobile data by default
 ro.com.android.mobiledata=false
+
+#Treble
+persist.media.treble_omx=false

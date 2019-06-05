@@ -26,9 +26,6 @@ ro.config.media_vol_steps=25
 # NFC
 ro.nfc.sec_hal=true
 
-# Camera
-camera2.portability.force_api=1
-
 # Vendor security patch level
 ro.lineage.build.vendor_security_patch=2017-08-01
 
